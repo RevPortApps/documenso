@@ -19,7 +19,7 @@ export const render = (element: React.ReactNode, options?: RenderOptions) => {
     <Tailwind
       config={{
         theme: {
-          extend: {
+          extend: { 
             colors,
           },
         },

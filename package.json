@@ -13,6 +13,7 @@
     "format": "prettier --write \"**/*.{js,jsx,cjs,mjs,ts,tsx,cts,mts,mdx}\"",
     "prepare": "husky && husky install || true",
     "commitlint": "commitlint --edit",
+    
     "clean": "turbo run clean && rimraf node_modules",
     "d": "npm run dx && npm run translate:compile && npm run dev",
     "dx": "npm i && npm run dx:up && npm run prisma:migrate-dev && npm run prisma:seed",
@@ -55,7 +56,10 @@
     "prettier": "^3.3.3",
     "rimraf": "^5.0.1",
     "turbo": "^1.9.3",
-    "vite": "^6.1.0"
+    "vite": "^6.1.0",
+    "@documenso/eslint-config": "1.10.0-rc.4",
+    "@documenso/prettier-config": "1.10.0-rc.4",
+    "@documenso/tsconfig": "1.10.0-rc.4"
   },
   "name": "@documenso/root",
   "workspaces": [
@@ -71,7 +75,7 @@
     "luxon": "^3.5.0",
     "mupdf": "^1.0.0",
     "react": "^18",
-    "typescript": "5.6.2",
+    "typescript": "5.7.2",
     "zod": "3.24.1"
   },
   "overrides": {

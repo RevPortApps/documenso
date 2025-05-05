@@ -7,6 +7,7 @@ import tailwindcss from 'tailwindcss';
 import { defineConfig } from 'vite';
 import macrosPlugin from 'vite-plugin-babel-macros';
 import tsconfigPaths from 'vite-tsconfig-paths';
+import type { AcceptedPlugin } from 'postcss';
 
 /**
  * Note: We load the env variables externally so we can have runtime enviroment variables
@@ -17,11 +18,11 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 export default defineConfig({
   css: {
     postcss: {
-      plugins: [tailwindcss, autoprefixer],
+      plugins: [tailwindcss(), autoprefixer] as any[],
     },
   },
   server: {
-    port: 3000,
+    port: 3001,
     strictPort: true,
   },
   plugins: [
