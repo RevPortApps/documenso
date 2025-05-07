@@ -1,0 +1,247 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #FFFFFF;
+    --foreground:#0F172A;
+
+    --muted: #F1F5F9;
+    --muted-foreground: #64748B;
+
+    --popover:#FFFFFF;
+    --popover-foreground:#0F172A;
+
+    --card: #FFFFFF;
+    --card-border: #E2E8F0;
+    --card-border-tint: #7861CA;
+    --card-foreground: #0F172A;
+
+    --field-card:#E2F8D3;
+    --field-card-border:#A2E771;
+    --field-card-foreground:#0F172A;
+
+    --widget:#F7F7F7;
+    --widget-foreground: #F2F2F2;
+
+    --border: #E2E8F0;
+    --input: #E2E8F0;
+
+    --primary: #A2E771;
+    --primary-foreground: #162C07;
+
+    --secondary: #F1F5F9;
+    --secondary-foreground:#0F172A;
+
+    --accent: #F1F5F9;
+    --accent-foreground:#0F172A;
+
+    --destructive:#FF0000;
+    --destructive-foreground: #F8FAFC;
+
+    --ring: #A2E771;
+
+    --radius: 0.5rem;
+
+    --warning: #E1CB05;
+
+    --gold: #FACC15;
+
+    --signer-green:#7AC355;
+    --signer-blue: #387BC7;
+    --signer-purple: #9747FF;
+    --signer-orange: #F69F1E;
+    --signer-yellow: #DBBA00;
+    --signer-pink: #D94ABA;
+
+    /* Base - Neutral */
+    --new-neutral-50: #F5F5F5;
+    --new-neutral-100:#E8E8E8;
+    --new-neutral-200: #D1D1D1;
+    --new-neutral-300: #B0B0B0;
+    --new-neutral-400: #878787;
+    --new-neutral-500: #6E6E6E;
+    --new-neutral-600: #5C5C5C;
+    --new-neutral-700:#4F4F4F;
+    --new-neutral-800: #454545;
+    --new-neutral-900: #3D3D3D;
+    --new-neutral-950:#171717;
+
+    /* Base - White */
+    --new-white-50: #0D0D0D;
+    --new-white-60: #0F0F0F;
+    --new-white-100: #1A1A1A;
+    --new-white-200: #333333;
+    --new-white-300: #4D4D4D;
+    --new-white-400: #666666;
+    --new-white-500: #808080;
+    --new-white-600: #999999;
+    --new-white-700: #CCCCCC;
+    --new-white-800: #E6E6E6;
+    --new-white-900: #FFFFFF;
+
+    /* Primary - Green */
+    --new-primary-50: #F6FDF2;
+    --new-primary-100: #EEFBE5;
+    --new-primary-200: #DBF5C7;
+    --new-primary-300: #C9F1AC;
+    --new-primary-400:#B5EC8E;
+    --new-primary-500: #A1E76F;
+    --new-primary-600:#7CDD36;
+    --new-primary-700: #5CB31E;
+    --new-primary-800: #3D7614;
+    --new-primary-900: #1F3D0A;
+    --new-primary-950: #101F05;
+
+    /* Secondary - Info */
+    --new-info-50: #EBF2F9;
+    --new-info-100: #D7E5F4;
+    --new-info-200: #B0CAE8;
+    --new-info-300: #88B0DD;
+    --new-info-400: #6095D2;
+    --new-info-500: #387BC7;
+    --new-info-600: #2D629F;
+    --new-info-700: #224A77;
+    --new-info-800: #17314F;
+    --new-info-900: #0B1928;
+    --new-info-950: #060C14;
+
+    /* Secondary - Error */
+    --new-error-50:#FDEEED;
+    --new-error-100: #FAD8D6;
+    --new-error-200: #F6B5B1;
+    --new-error-300:#F18E88;
+    --new-error-400: #ED6B64;
+    --new-error-500:#E8463B;
+    --new-error-600: #D22219;
+    --new-error-700:#9B1912;
+    --new-error-800: #69110C;
+    --new-error-900:#320806;
+    --new-error-950: #1C0403;
+
+    /* Secondary - Warning */
+    --new-warning-50:#FFF8EB;
+    --new-warning-100: #FFF3DB;
+    --new-warning-200: #FFE6B8;
+    --new-warning-300: #FFDA94;
+    --new-warning-400:#FFCB6B;
+    --new-warning-500: #FFBF47;
+    --new-warning-600: #FFB224;
+    --new-warning-700: #DB8F00;
+    --new-warning-800: #946000;
+    --new-warning-900: #472E00;
+    --new-warning-950: #241700;
+
+    /* Surface */
+    --new-surface-black:#000000;
+    --new-surface-white:#E8E8E8;
+  }
+
+  .dark:not(.dark-mode-disabled) {
+    --background:#262626;
+    --foreground:#F7F7F7;
+
+    --muted: #3C3C3C;
+    --muted-foreground: #D9D9D9;
+
+    --popover:#262626;
+    --popover-foreground: #E6E6E6;
+
+    --card:#262626;
+    --card-border: #474747;
+    --card-border-tint: #7861CA;
+    --card-foreground: #F2F2F2;
+
+    --widget:#262626;
+    --widget-foreground:#2E2E2E;
+
+    --border:#474747;
+    --input:#474747;
+
+    --field-border: #E2E8F0;
+
+    --primary: #A2E771;
+    --primary-foreground: #162C07;
+
+    --secondary:#3C3C3C;
+    --secondary-foreground: #A2E771;
+
+    --accent:#474747;
+    --accent-foreground: #A2E771;
+
+    --destructive: #F24A4A;
+    --destructive-foreground: #5B0606;
+
+    --ring: #A2E771;
+
+    --radius: 0.5rem;
+
+    --warning: #E1CB05;
+
+    --gold: #FACC15;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+}
+
+/*
+ * Custom CSS for printing reports
+ * - Sets page margins to 0.5 inches
+ * - Hides the header and footer
+ * - Hides the print button
+ * - Sets page size to A4
+ * - Sets the font size to 12pt
+ */
+.print-provider {
+  @page {
+    margin: 1in;
+    size: A4;
+  }
+}
+
+.gradient-border-mask::before {
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+  border-radius: 10px;
+  scrollbar-gutter: stable;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgb(100 116 139 / 1);
+  border-radius: 10px;
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgb(100 116 139 / 0.5);
+}
+
+/* Custom Swagger Dark Theme */
+.swagger-dark-theme .swagger-ui {
+  filter: invert(88%) hue-rotate(180deg);
+}
+
+.swagger-dark-theme .swagger-ui .microlight {
+  filter: invert(100%) hue-rotate(180deg);
+}

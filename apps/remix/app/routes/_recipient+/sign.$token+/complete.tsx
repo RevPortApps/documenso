@@ -1,11 +1,10 @@
 import { useEffect } from 'react';
 
-import { msg } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
 import { type Document, DocumentStatus, FieldType, RecipientRole } from '@prisma/client';
-import { CheckCircle2, Clock8, FileSearch } from 'lucide-react';
-import { Link, useRevalidator } from 'react-router';
+import { CheckCircle2, Clock8 } from 'lucide-react';
+import { useRevalidator } from 'react-router';
 import { match } from 'ts-pattern';
 
 import signingCelebration from '@documenso/assets/images/signing-celebration.png';
@@ -19,15 +18,10 @@ import { getRecipientSignatures } from '@documenso/lib/server-only/recipient/get
 import { getUserByEmail } from '@documenso/lib/server-only/user/get-user-by-email';
 import { isDocumentCompleted } from '@documenso/lib/utils/document';
 import { env } from '@documenso/lib/utils/env';
-import DocumentDialog from '@documenso/ui/components/document/document-dialog';
-import { DocumentDownloadButton } from '@documenso/ui/components/document/document-download-button';
-import { DocumentShareButton } from '@documenso/ui/components/document/document-share-button';
 import { SigningCard3D } from '@documenso/ui/components/signing-card';
 import { cn } from '@documenso/ui/lib/utils';
 import { Badge } from '@documenso/ui/primitives/badge';
-import { Button } from '@documenso/ui/primitives/button';
 
-import { ClaimAccount } from '~/components/general/claim-account';
 import { DocumentSigningAuthPageView } from '~/components/general/document-signing/document-signing-auth-page';
 
 import type { Route } from './+types/complete';
@@ -203,7 +197,7 @@ export default function CompletedSigningPage({ loaderData }: Route.ComponentProp
               </p>
             ))}
 
-          <div className="mt-8 flex w-full max-w-sm items-center justify-center gap-4">
+          {/* <div className="mt-8 flex w-full max-w-sm items-center justify-center gap-4">
             <DocumentShareButton documentId={document.id} token={recipient.token} />
 
             {isDocumentCompleted(document.status) ? (
@@ -228,10 +222,10 @@ export default function CompletedSigningPage({ loaderData }: Route.ComponentProp
                 }
               />
             )}
-          </div>
+          </div> */}
         </div>
 
-        <div className="flex flex-col items-center">
+        {/* <div className="flex flex-col items-center">
           {canSignUp && (
             <div className="flex max-w-xl flex-col items-center justify-center p-4 md:p-12">
               <h2 className="mt-8 text-center text-xl font-semibold md:mt-0">
@@ -253,7 +247,7 @@ export default function CompletedSigningPage({ loaderData }: Route.ComponentProp
               <Trans>Go Back Home</Trans>
             </Link>
           )}
-        </div>
+        </div> */}
       </div>
 
       <PollUntilDocumentCompleted document={document} />

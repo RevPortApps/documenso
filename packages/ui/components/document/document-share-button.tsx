@@ -5,7 +5,6 @@ import { msg } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
 import { Copy, Sparkles } from 'lucide-react';
-import { FaXTwitter } from 'react-icons/fa6';
 
 import { useCopyShareLink } from '@documenso/lib/client-only/hooks/use-copy-share-link';
 import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
@@ -154,7 +153,7 @@ export const DocumentShareButton = ({
         <div className="flex w-full flex-col">
           <div className="rounded-md border p-4">
             I just {token ? 'signed' : 'sent'} a document in style with{' '}
-            <span className="font-medium text-blue-400">@documenso</span>
+            <span className="font-medium text-blue-400">@acclimetry</span>
             . Check it out!
             <span className="mt-2 block" />
             <span
@@ -183,10 +182,10 @@ export const DocumentShareButton = ({
           </div>
 
           <div className="mt-6 flex items-center gap-4">
-            <Button variant="outline" className="flex-1" onClick={onTweetClick}>
+            {/* <Button variant="outline" className="flex-1" onClick={onTweetClick}>
               <FaXTwitter className="mr-2 h-4 w-4" />
               Tweet
-            </Button>
+            </Button> */}
 
             <Button variant="outline" className="flex-1" onClick={onCopyClick}>
               <Copy className="mr-2 h-4 w-4" />

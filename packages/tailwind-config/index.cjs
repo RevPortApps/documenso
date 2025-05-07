@@ -66,15 +66,15 @@ module.exports = {
           foreground: 'hsl(var(--widget-foreground))',
         },
         documenso: {
-          DEFAULT: '#A2E771',
+          DEFAULT: '#001f3d',
           50: '#FFFFFF',
           100: '#FDFFFD',
           200: '#E7F9DA',
           300: '#D0F3B7',
           400: '#B9ED94',
-          500: '#A2E771',
+          500: '#001f3d',
           600: '#83DF41',
-          700: '#66C622',
+          700: '#0d1f02',
           800: '#4D9619',
           900: '#356611',
           950: '#284E0D',
@@ -165,3 +165,171 @@ function addVariablesForColors({ addBase, theme }) {
     ':root': newVars,
   });
 }
+
+// /* eslint-disable @typescript-eslint/no-var-requires */
+// const { fontFamily } = require('tailwindcss/defaultTheme');
+// const { default: flattenColorPalette } = require('tailwindcss/lib/util/flattenColorPalette');
+
+// /** @type {import('tailwindcss').Config} */
+// module.exports = {
+//   darkMode: ['variant', '&:is(.dark:not(.dark-mode-disabled) *)'],
+//   content: ['src/**/*.{ts,tsx}'],
+//   theme: {
+//     extend: {
+//       fontFamily: {
+//         sans: ['var(--font-sans)', ...fontFamily.sans],
+//         signature: ['var(--font-signature)'],
+//       },
+//       zIndex: {
+//         9999: '9999',
+//       },
+//       aspectRatio: {
+//         'signature-pad': '16 / 7',
+//       },
+//       colors: {
+//         border: 'var(--border)',
+//         'field-border': 'var(--field-border)',
+//         input: 'var(--input)',
+//         ring: 'var(--ring)',
+//         background: 'var(--background)',
+//         foreground: 'var(--foreground)',
+//         primary: {
+//           DEFAULT: 'var(--primary)',
+//           foreground: 'var(--primary-foreground)',
+//         },
+//         secondary: {
+//           DEFAULT: 'var(--secondary)',
+//           foreground: 'var(--secondary-foreground)',
+//         },
+//         warning: {
+//           DEFAULT: 'var(--warning)',
+//         },
+//         destructive: {
+//           DEFAULT: 'var(--destructive)',
+//           foreground: 'var(--destructive-foreground)',
+//         },
+//         muted: {
+//           DEFAULT: 'var(--muted)',
+//           foreground: 'var(--muted-foreground)',
+//         },
+//         accent: {
+//           DEFAULT: 'var(--accent)',
+//           foreground: 'var(--accent-foreground)',
+//         },
+//         popover: {
+//           DEFAULT: 'var(--popover)',
+//           foreground: 'var(--popover-foreground)',
+//         },
+//         card: {
+//           DEFAULT: 'var(--card)',
+//           foreground: 'var(--card-foreground)',
+//         },
+//         'field-card': {
+//           DEFAULT: 'var(--field-card)',
+//           border: 'var(--field-card-border)',
+//           foreground: 'var(--field-card-foreground)',
+//         },
+//         widget: {
+//           DEFAULT: 'var(--widget)',
+//           foreground: 'var(--widget-foreground)',
+//         },
+//         documenso: {
+//           DEFAULT: '#001f3d',
+//           50: '#FFFFFF',
+//           100: '#FDFFFD',
+//           200: '#E7F9DA',
+//           300: '#D0F3B7',
+//           400: '#B9ED94',
+//           500: '#001f3d',
+//           600: '#83DF41',
+//           700: '#66C622',
+//           800: '#4D9619',
+//           900: '#356611',
+//           950: '#284E0D',
+//         },
+//         dawn: {
+//           DEFAULT: '#aaa89f',
+//           50: '#f8f8f8',
+//           100: '#f1f1ef',
+//           200: '#e6e5e2',
+//           300: '#d4d3cd',
+//           400: '#b9b7b0',
+//           500: '#aaa89f',
+//           600: '#88857a',
+//           700: '#706e65',
+//           800: '#5f5d55',
+//           900: '#52514a',
+//           950: '#2a2925',
+//         },
+//         water: {
+//           DEFAULT: '#d7e4f3',
+//           50: '#f3f6fb',
+//           100: '#e3ebf6',
+//           200: '#d7e4f3',
+//           300: '#abc7e5',
+//           400: '#82abd8',
+//           500: '#658ecc',
+//           600: '#5175bf',
+//           700: '#4764ae',
+//           800: '#3e538f',
+//           900: '#364772',
+//           950: '#252d46',
+//         },
+//       },
+//       backgroundImage: {
+//         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+//         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+//       },
+//       borderRadius: {
+//         DEFAULT: 'calc(var(--radius) - 3px)',
+//         '2xl': 'calc(var(--radius) + 4px)',
+//         xl: 'calc(var(--radius) + 2px)',
+//         lg: 'var(--radius)',
+//         md: 'calc(var(--radius) - 2px)',
+//         sm: 'calc(var(--radius) - 4px)',
+//       },
+//       keyframes: {
+//         'accordion-down': {
+//           from: { height: 0 },
+//           to: { height: 'var(--radix-accordion-content-height)' },
+//         },
+//         'accordion-up': {
+//           from: { height: 'var(--radix-accordion-content-height)' },
+//           to: { height: 0 },
+//         },
+//         'caret-blink': {
+//           '0%,70%,100%': { opacity: '1' },
+//           '20%,50%': { opacity: '0' },
+//         },
+//       },
+//       animation: {
+//         'accordion-down': 'accordion-down 0.2s ease-out',
+//         'accordion-up': 'accordion-up 0.2s ease-out',
+//         'caret-blink': 'caret-blink 1.25s ease-out infinite',
+//       },
+//       screens: {
+//         '3xl': '1920px',
+//         '4xl': '2560px',
+//         '5xl': '3840px',
+//         print: { raw: 'print' },
+//       },
+//     },
+//   },
+//   plugins: [
+//     require('tailwindcss-animate'),
+//     require('@tailwindcss/typography'),
+//     require('@tailwindcss/container-queries'),
+//     addVariablesForColors,
+//   ],
+// };
+
+// function addVariablesForColors({ addBase, theme }) {
+//   let allColors = flattenColorPalette(theme('colors'));
+//   let newVars = Object.fromEntries(
+//     Object.entries(allColors).map(([key, val]) => [`--${key}`, val]),
+//   );
+
+//   addBase({
+//     ':root': newVars,
+//   });
+// }
